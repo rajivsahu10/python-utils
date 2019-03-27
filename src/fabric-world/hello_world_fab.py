@@ -3,7 +3,8 @@ import fabric
 
 def main():
     # machines = ['192.168.1.6']
-    con = fabric.Connection('192.168.1.6',user='raj', connect_kwargs={"password": "aaaaaaaa"})
+    mypassword = input("enter machine password : ", )
+    con = fabric.Connection('192.168.1.6',user='raj', connect_kwargs={"password": mypassword})
     con.run('ls -l')
 
 
